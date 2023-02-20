@@ -37,7 +37,7 @@ namespace UnitTests
 	TEST_CLASS(UnitTests)
 	{
 	public:
-
+		/*Basic test case 1*/
 		TEST_METHOD(TestBasic1)
 		{
 			//Provided Simple Example Case 1
@@ -57,7 +57,7 @@ namespace UnitTests
 			Assert::AreEqual(q.Dequeue(), 2);
 			Assert::AreEqual(q.Dequeue(), 3);
 		}
-
+		/*Basic test case 2*/
 		TEST_METHOD(TestBasic2)
 		{
 			//Provided Example Case 2
@@ -96,7 +96,7 @@ namespace UnitTests
 		}
 
 
-
+		/*Thread safe test 1*/
 		TEST_METHOD(TestThread1)
 		{
 			PriorityQueue<int> q;
@@ -145,8 +145,9 @@ namespace UnitTests
 			{
 				Assert::AreEqual(q.Dequeue(), output[i]);
 			}
-
 		}
+		
+		/*Thread safe test 2*/
 		TEST_METHOD(TestThread2)
 		{
 			PriorityQueue<short> q;
@@ -191,7 +192,7 @@ namespace UnitTests
 		}
 
 		/*
-			EDGE CASES
+		EDGE CASES
 		*/
 		TEST_METHOD(TestThreadFull)
 		{
